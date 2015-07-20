@@ -1,0 +1,37 @@
+{
+  "name": "soundplayer-desktop",
+  "longname": "SoundPlayer",
+  "namespace": "com.voronianski.soundplayer",
+  "version": "0.0.0",
+  "description": "Desktop SoundCloud player",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "sources": {
+    "directory": "."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/soundblogs/soundplayer-desktop.git"
+  },
+  "keywords": [
+    "tint2",
+    "desktop",
+    "soundcloud",
+    "player",
+    "node"
+  ],
+  "author": "Dmitri Voronianski <dmitri.voronianski@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/soundblogs/soundplayer-desktop/issues"
+  },
+  "homepage": "https://github.com/soundblogs/soundplayer-desktop#readme",
+  "dependencies": {
+    "react": "^0.13.3"
+  },
+  "devDependencies": {
+    "babel": "^5.6.23"
+  }
+}
