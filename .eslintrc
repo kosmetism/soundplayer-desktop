@@ -24,6 +24,7 @@
     "camelcase": 0
   },
   "globals": {
-    "expect": true
+    "expect": true,
+    "application": true
   }
 }

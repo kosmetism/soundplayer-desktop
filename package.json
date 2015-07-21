@@ -4,12 +4,18 @@
   "namespace": "com.voronianski.soundplayer",
   "version": "0.0.0",
   "description": "Desktop SoundCloud player",
-  "main": "main.js",
+  "main": "lib/main.js",
   "scripts": {
+    "build:tint": "tntbuild ./package.json --clean --no-windows-build",
+    "build:babel": "rm -rf ./lib && babel src -d lib --stage 0",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "sources": {
     "directory": "."
+  },
+  "icon": {
+    "osx": ["./lib/tintruntime.png"],
+    "windows": ["./lib/tintruntime.png"]
   },
   "repository": {
     "type": "git",
@@ -18,9 +24,9 @@
   "keywords": [
     "tint2",
     "desktop",
+    "os x",
     "soundcloud",
-    "player",
-    "node"
+    "player"
   ],
   "author": "Dmitri Voronianski <dmitri.voronianski@gmail.com>",
   "license": "MIT",
