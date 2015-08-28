@@ -7,11 +7,10 @@
   "main": "src/main.js",
   "scripts": {
     "build:tint": "rm -rf ./build && tntbuild ./package.json --clean --no-windows-build",
-    "build:webpack": "NODE_ENV=production webpack --config webpack.config.js --progress --colors -p",
-    "build:cssnext": "cssnext ./gui/cssnext/app.css ./src/dist/app.min.css -c",
-    "watch": "webpack --config webpack.config.js --progress --colors --watch",
-    "start": "npm run watch",
-    "build": "npm run build:cssnext & npm run build:webpack && npm run build:tint",
+    "build:webpack": "NODE_ENV=production webpack --config webpack.config.prod.js --progress --colors -p",
+    "watch": "webpack --config webpack.config.dev.js --progress --colors --watch",
+    "start": "npm run watch && tint ./src/main.js",
+    "build": "npm run build:webpack && npm run build:tint",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "sources": {
@@ -50,6 +49,7 @@
     "cssnext": "^1.8.4",
     "cssnext-loader": "^1.0.1",
     "envify": "^3.4.0",
+    "extract-text-webpack-plugin": "^0.8.2",
     "style-loader": "^0.12.3",
     "transform-loader": "^0.2.2",
     "uglify-js": "^2.4.24",

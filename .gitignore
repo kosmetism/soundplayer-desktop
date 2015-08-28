@@ -4,4 +4,5 @@ node_modules
 *.map
 
 build
-lib
+src/dist/*.js
+src/dist/*.css
