@@ -5,10 +5,10 @@ var path = require('path');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-    entry: './src/gui/app',
+    entry: './gui/js/app',
 
     output: {
-        path: path.join(__dirname, 'src', 'dist'),
+        path: path.join(__dirname, 'core', 'dist'),
         filename: 'app.min.js'
     },
 
@@ -28,10 +28,7 @@ module.exports = {
         loaders: [{
             test: /\.jsx?$/,
             exclude: /node_modules/,
-            loader: 'babel',
-            query: {
-                stage: 0
-            }
+            loader: 'babel?stage=0'
         }, {
             test: /\.css$/,
             loader: ExtractTextPlugin.extract('style-loader', 'css-loader!cssnext-loader')

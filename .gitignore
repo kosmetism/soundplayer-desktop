@@ -4,5 +4,7 @@ node_modules
 *.map
 
 build
-src/dist/*.js
-src/dist/*.css
+core/dist/*.js
+core/dist/*.css
+core/dist/*.html
+test_tint.js

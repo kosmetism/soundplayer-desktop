@@ -16,7 +16,7 @@ view.alpha = 0.92;
 view.top = 0;
 view.left = view.right = view.bottom = 0;
 view.transparent = true;
-view.location = 'app://src/layouts/index.html';
+view.location = 'app://core/dist/index.html';
 win.appendChild(view);
 
 application.exitAfterWindowsClose = true;

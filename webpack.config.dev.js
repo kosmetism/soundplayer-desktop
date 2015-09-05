@@ -4,10 +4,10 @@ var webpack = require('webpack');
 var path = require('path');
 
 module.exports = {
-    entry: './src/gui/app',
+    entry: './gui/js/app',
 
     output: {
-        path: path.join(__dirname, 'public', 'dist'),
+        path: path.join(__dirname, 'core', 'dist'),
         filename: 'app.js'
     },
 

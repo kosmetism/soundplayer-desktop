@@ -1,5 +1,5 @@
 // React powered "client" starts here (written in ES2015)
-import './cssnext/app.css';
+import '../cssnext/app.css';
 import React from 'react';
 
 class App extends React.Component {

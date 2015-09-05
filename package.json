@@ -4,21 +4,25 @@
   "namespace": "com.voronianski.soundplayer",
   "version": "0.0.0",
   "description": "Desktop SoundCloud player",
-  "main": "src/main.js",
+  "main": "core/main.js",
   "scripts": {
-    "build:tint": "rm -rf ./build && tntbuild ./package.json --clean --no-windows-build",
+    "build:tint": "rm -rf ./build/ && tntbuild ./package.json --clean --no-windows-build",
     "build:webpack": "NODE_ENV=production webpack --config webpack.config.prod.js --progress --colors -p",
     "watch": "webpack --config webpack.config.dev.js --progress --colors --watch",
-    "start": "npm run watch && tint ./src/main.js",
+    "start": "tint ./core/main.js",
     "build": "npm run build:webpack && npm run build:tint",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "sources": {
-    "directory": "."
+    "directory": ".",
+    "exclude": "node_modules|gui|bin|test|webpack.config.dev.js|webpack.config.prod.js"
   },
   "icon": {
+    "windows": [
+      "./core/assets/tintruntime.png"
+    ],
     "osx": [
-      "./src/tintruntime.png"
+      "./core/assets/tintruntime.png"
     ]
   },
   "repository": {
